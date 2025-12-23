@@ -1,0 +1,50 @@
+{
+  "ttfb": { "value": 190.997, "score": 1 },
+  "fcp": { "value": 3733.47, "score": 0.29 },
+  "speed_index": { "value": 5061.739, "score": 0.623 },
+  "tbt": { "value": 201, "score": 0.893 },
+  "lcp": { "value": 5733.47, "score": 0.16 },
+  "cls": { "value": 0, "score": 1 },
+  "performance": 65,
+  "details": [
+    {
+      "timings": {
+        "sale_page_loader": 2,
+        "root_loader": 100.4,
+        "getABTests": 50.9,
+        "getWaSession": 98.2
+      },
+      "ttfb": 190.997,
+      "cf_reg": "MSP50-P4",
+      "fly_machine_id": "e286060f434158",
+      "fly_region": "ord",
+      "fly_app": "acmecorp"
+    },
+    {
+      "timings": {
+        "sale_page_loader": 1.6,
+        "root_loader": 144.1,
+        "getABTests": 43.4,
+        "getWaSession": 142
+      },
+      "ttfb": 195.654,
+      "cf_reg": "MSP50-P4",
+      "fly_machine_id": "e286060f434158",
+      "fly_region": "ord",
+      "fly_app": "acmecorp"
+    },
+    {
+      "timings": {
+        "sale_page_loader": 1.7,
+        "root_loader": 102.7,
+        "getABTests": 45.2,
+        "getWaSession": 100.3
+      },
+      "ttfb": 204.752,
+      "cf_reg": "MSP50-P4",
+      "fly_machine_id": "e286060f434158",
+      "fly_region": "ord",
+      "fly_app": "acmecorp"
+    }
+  ]
+}

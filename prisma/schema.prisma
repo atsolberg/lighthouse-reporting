@@ -1,0 +1,33 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Report {
+  id        String   @id @unique @default(cuid())
+  target    String
+  score     Decimal
+  ttfb      Decimal?
+  lcp       Decimal?
+  fcp       Decimal?
+  createdAt DateTime @default(now())
+}
+
+model LatestReportStats {
+  target    String   @id @unique
+  rawStats  String
+  updatedAt DateTime @default(now())
+}
+
+model UserData {
+  id        String   @id @unique @default(cuid())
+  target    String
+  region    String
+  ttfb      Decimal
+  timings   Json
+  createdAt DateTime @default(now())
+}

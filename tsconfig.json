@@ -1,0 +1,52 @@
+// See https://www.totaltypescript.com/tsconfig-cheat-sheet for a great
+// explanation for each of these options.
+{
+  "include": ["app/types/**/*.ts", "app/.server/**/*.js", "**/*.d.ts"],
+  "exclude": ["node_modules", "build", "public", "**/*.test.js"],
+  "compilerOptions": {
+    // Tells TypeScript what built-in types to include. es2022 is the best
+    // option for stability. dom and dom.iterable give you types for window,
+    // document etc.
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "isolatedModules": true,
+    // Helps mend a few of the fences between CommonJS and ES Modules.
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    // Allows you to import .json files.
+    "resolveJsonModule": true,
+    // Prevents you from accessing an array or object without first checking if
+    // it's defined. This is a great way to prevent runtime errors, and should
+    // really be included in strict.
+    "noUncheckedIndexedAccess": true,
+    // The version of JavaScript you're targeting.
+    // Recommend es2022 over esnext for stability.
+    "target": "ES2022",
+    // This option forces TypeScript to consider all files as modules.
+    // This helps to avoid 'cannot redeclare block-scoped variable' errors.
+    "moduleDetection": "force",
+
+    "strict": true, // Enables all strict type checking options. Indispensable.
+    "allowJs": true, // Allows you to import .js files.
+    "checkJs": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    // Skips checking the types of .d.ts files.
+    // This is important for performance, because otherwise all node_modules
+    // will be checked.
+    "skipLibCheck": true,
+
+    "forceConsistentCasingInFileNames": true,
+    "noErrorTruncation": true,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"]
+    },
+    "typeRoots": ["./types", "./node_modules/@types"],
+
+    // Vite takes care of building everything
+    "noEmit": true
+  }
+}
